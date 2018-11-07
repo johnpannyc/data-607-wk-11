@@ -1,0 +1,69 @@
+---
+title: "DATA 607 WK 11 Assignment"
+author: "Jun Pan"
+date: "November 4, 2018"
+output: html_document
+---
+
+```
+Your task is to analyze an existing recommender system that you find interesting.  You should:
+1.	Perform a Scenario Design analysis as described below.  Consider whether it makes sense for your selected recommender system to perform scenario design twice, once for the organization (e.g. Amazon.com) and once for the organization's customers.
+2.	Attempt to reverse engineer what you can about the site, from the site interface and any available information that you can find on the Internet or elsewhere.
+3.	Include specific recommendations about how to improve the site's recommendation capabilities going forward. 
+4.	Create your report using an R Markdown file, and create a discussion thread with a link to the GitHub repo where your Markdown file notebook resides.  You are not expected to need to write code for this discussion assignment.
+```
+
+  Finding relevant publications is important for scientists who have to cope with exponentially increasing numbers of scholarly material. Pubmed is one of the most popular recommendation system for medical research scientist.  PubMed is a free search engine accessing primarily the MEDLINE database of references and abstracts on life sciences and biomedical topics. The United States National Library of Medicine (NLM) at the National Institutes of Health maintains the database as part of the Entrez system of information retrieval.
+
+  PubMed comprises over 28 million citations for biomedical literature from MEDLINE, life science journals, and online books. PubMed citations and abstracts include the fields of biomedicine and health, covering portions of the life sciences, behavioral sciences, chemical sciences, and bioengineering. PubMed also provides access to additional relevant web sites and links to the other NCBI molecular biology resources.
+
+  The main algorithm for recommendation based on the match of the following information:
+
+  The standard PubMed Best Match sort is based on a weighted term frequency algorithm. This approach calculates the frequency with which terms appear in PubMed records. Those frequencies are then applied in a weighted fashion to return a ranked list of PubMed citations that match your query terms.
+
+  The new relevance algorithm includes machine learning to re-rank the top articles returned. This algorithm combines over 150 signals that are helpful for finding best matching results. Most of these signals are computed from the number of matches between the search terms and the PubMed record, while others are either specific to a record (e.g., publication type; publication year) or specific to a search (e.g., search length). The new ranking model was built on relevance data obtained from anonymous PubMed search logs that were aggregated over an extended period of time. See PubMed Help for more information on the standard relevance algorithm and machine learning.
+
+
+#Scenario Design Analysis for Pubmed's Customers
+
+(1) Who are the target users?
+
+health related workers and students
+
+(2) What are their key goals?
+
+Their key goal is to find particularly articles for their research.
+
+(3)How can the recommender system help them accomplish these goals?
+
+A process called Automatic Term Mapping (ATM) are used in Pubmed recommender system.  To search PubMed, enter your concepts in phrases into the search box. For most PubMed searches, it is best to:
+Be specific. The more terms you enter, the narrower your search will be and the fewer irrelevant results you will retrieve. PubMed will differentiate topic words, journal titles and author names. Focus on terminology, not syntax. 
+
+
+Scenario Design Analysis for Pubmed Organization
+
+(1) Who are the target users?
+
+The target users are research scientists in life science and medical field.
+
+(2) What are their key goals?
+
+Provide a search engine to help their user to find the articles which they need.
+
+(3)How can the recommender system help them accomplish these goals?
+
+A few machine technology is involving in the recommender system.
+
+# Reverse engineer
+
+The majority of journals selected for Pumed are based on the recommendation of the Literature Selection Technical Review Committee (LSTRC), an NIH-chartered advisory committee of external experts analogous to the committees that review NIH grant applications. Some additional journals and newsletters are selected based on NLM-initiated reviews in areas that are special priorities for NLM or other NIH components (e.g., history of medicine, health services research, AIDS, toxicology and environmental health, molecular biology, and complementary medicine). These reviews generally also involve consultation with an array of NIH and outside experts or, in some cases, external organizations with which NLM has special collaborative arrangements.
+
+# Recommendations
+
+The pubmed is a sophisticated system, supported by federal government and served so many decades for research scientist.  Most time, pubmed recommendation system can fit in our needs.
+
+However, we still experience the query used for pubmed search are fixed by the search engine.  So we feel the capability is limited sometimes.  For example, according key words search, we can get a few hundreds of items which we need to filter by ourself one by one.  If we can not set up our search queries.  For example, let sort the article by the rank of the journal in descending order (focusing on high valued articles).  There is no way we can do it now.  Although I heard that R has a package which can work on pubmed database, the functions are limited.  
+
+So data scientists need to develop more packages which can be used for running more queries according to the scientists' need in some popular languages such as R and Python.  
+
+
